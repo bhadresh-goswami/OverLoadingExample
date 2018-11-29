@@ -8,8 +8,34 @@
 
 #include <iostream>
 
+class OverloadClass {
+    
+    
+public:
+    void calc()
+    {
+        int a = 10;
+        std::cout<<"\n\tthis is value of a :"<<a;
+    }
+    void calc(int a)
+    {
+        
+        std::cout<<"\n\tthis is value of a :"<<a;
+    }
+    void calc(int a,int b)
+    {
+        
+        std::cout<<"\n\tthis is value of a :"<<a<<" and b :"<<b<<"!\n\n";
+    }
+};
+
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+
+    
+    OverloadClass obj;
+    obj.calc();
+    obj.calc(22);
+    obj.calc(1, 22);
     return 0;
 }
